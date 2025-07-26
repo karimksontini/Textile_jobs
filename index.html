@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Analyse Marché Textile Tunisien</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🧵 Analyse du Marché Textile Tunisien</h1>
+            <p>Tableau de bord complet des tendances, segments clients et paysage concurrentiel - Données 2024-2025</p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('overview')">Vue d'ensemble</button>
+            <button class="nav-tab" onclick="showSection('trends')">Tendances Marché</button>
+            <button class="nav-tab" onclick="showSection('segments')">Segments Clients</button>
+            <button class="nav-tab" onclick="showSection('competition')">Concurrence</button>
+            <button class="nav-tab" onclick="showSection('employment')">Emploi & Métiers</button>
+            <button class="nav-tab" onclick="showSection('recommendations')">Recommandations</button>
+        </div>
+
+        <!-- Vue d'ensemble -->
+        <div id="overview" class="content-section active">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">1,500</div>
+                    <div class="metric-label">Entreprises</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">160K</div>
+                    <div class="metric-label">Emplois</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3.9B</div>
+                    <div class="metric-label">MD Exportations</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">9ème</div>
+                    <div class="metric-label">Rang UE</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">127%</div>
+                    <div class="metric-label">Taux Couverture</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">32K</div>
+                    <div class="metric-label">Postes Vacants</div>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>📊 Position Stratégique</h3>
+                    <p><strong>9ème fournisseur</strong> de l'Union Européenne</p>
+                    <p><strong>3ème producteur</strong> d'habillement du monde arabe</p>
+                    <p><strong>Leader européen</strong> des vêtements de travail (17,44%)</p>
+                    <p><strong>29% de l'emploi industriel</strong> tunisien</p>
+                </div>
+                
+                <div class="card">
+                    <h3>💰 Performance Économique</h3>
+                    <p><strong>Exportations 2025:</strong> 3,942 MD (+2,61%)</p>
+                    <p><strong>Contribution PIB:</strong> 5,5%</p>
+                    <p><strong>Objectif 2030:</strong> 5 milliards €</p>
+                    <p><strong>Taux de couverture:</strong> 127%</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🏭 Structure Industrielle</h3>
+                    <p><strong>85-87%</strong> entreprises totalement exportatrices</p>
+                    <p><strong>93,5%</strong> du besoin en confection</p>
+                    <p><strong>66,1%</strong> partenariat européen</p>
+                    <p><strong>31%</strong> du tissu industriel manufacturier</p>
+                </div>
+                
+                <div class="card">
+                    <h3>⚠️ Défis Majeurs</h3>
+                    <p><strong>32,000 postes</strong> à pourvoir immédiatement</p>
+                    <p><strong>5,4%</strong> seulement couverts par la formation</p>
+                    <p><strong>19 nouveaux métiers</strong> non couverts</p>
+                    <p><strong>7%</strong> seulement d'intégration locale</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">Évolution des Exportations Textiles (2020-2025)</div>
+                <canvas id="exportChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Tendances Marché -->
+        <div id="trends" class="content-section">
+            <div class="chart-container">
+                <div class="chart-title">Répartition des Exportations par Destination</div>
+                <canvas id="destinationChart"></canvas>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🌍 Marchés Principaux</h3>
+                    <p><strong>Europe:</strong> 87% des exportations</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 87%"></div>
+                    </div>
+                    <p><strong>France, Italie, Allemagne:</strong> 79% du total</p>
+                    <p><strong>Autres destinations:</strong> USA, Royaume-Uni</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📈 Tendances 2024-2025</h3>
+                    <p><strong>Croissance globale:</strong> +2,5%</p>
+                    <p><strong>Vêtements maille:</strong> -10,02%</p>
+                    <p><strong>Chaîne et trame:</strong> -0,32%</p>
+                    <p><strong>Textiles techniques:</strong> En expansion</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🔄 Économie Circulaire</h3>
+                    <p><strong>73%</strong> consommateurs européens prêts à payer plus</p>
+                    <p><strong>Pacte National</strong> Textile Circulaire lancé</p>
+                    <p><strong>Étiquetage obligatoire</strong> dès 2026</p>
+                    <p><strong>Transition verte</strong> en cours</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🏗️ Intégration Locale</h3>
+                    <p><strong>7%</strong> seulement de production locale</p>
+                    <p><strong>67%</strong> des importations sont des tissus</p>
+                    <p><strong>Dépendance européenne</strong> pour les matières</p>
+                    <p><strong>Besoin d'intégration</strong> verticale</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Évolution par Secteur d'Activité</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Secteur</th>
+                            <th>Entreprises</th>
+                            <th>Emplois</th>
+                            <th>Évolution 2024</th>
+                            <th>Perspectives</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Confection</td>
+                            <td>1,232</td>
+                            <td>130,037</td>
+                            <td>+2,5%</td>
+                            <td>Stable</td>
+                        </tr>
+                        <tr>
+                            <td>Bonneterie</td>
+                            <td>155</td>
+                            <td>17,414</td>
+                            <td>-10,02%</td>
+                            <td>Défis</td>
+                        </tr>
+                        <tr>
+                            <td>Finissage</td>
+                            <td>39</td>
+                            <td>9,373</td>
+                            <td>+1,2%</td>
+                            <td>Croissance</td>
+                        </tr>
+                        <tr>
+                            <td>Tissage</td>
+                            <td>28</td>
+                            <td>2,958</td>
+                            <td>+0,8%</td>
+                            <td>Potentiel</td>
+                        </tr>
+                        <tr>
+                            <td>Filature</td>
+                            <td>20</td>
+                            <td>2,007</td>
+                            <td>+1,5%</td>
+                            <td>Développement</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Segments Clients -->
+        <div id="segments" class="content-section">
+            <div class="chart-container">
+                <div class="chart-title">Segmentation Géographique des Clients</div>
+                <canvas id="clientChart"></canvas>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🇪🇺 Marché Européen</h3>
+                    <p><strong>87%</strong> des exportations totales</p>
+                    <p><strong>France:</strong> Premier client</p>
+                    <p><strong>Italie:</strong> Deuxième marché</p>
+                    <p><strong>Allemagne:</strong> Troisième destination</p>
+                    <p><strong>Autres:</strong> Belgique, Hollande, Espagne, Portugal</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🏢 Types de Clients</h3>
+                    <p><strong>Marques internationales:</strong> Clients principaux</p>
+                    <p><strong>Distributeurs européens:</strong> Partenaires clés</p>
+                    <p><strong>Franchises:</strong> Opportunités de croissance</p>
+                    <p><strong>Marché local:</strong> 13% des entreprises</p>
+                </div>
+                
+                <div class="card">
+                    <h3>👔 Segments Produits</h3>
+                    <p><strong>Vêtements de travail:</strong> Leader européen (17,44%)</p>
+                    <p><strong>Jeans:</strong> 4ème fournisseur UE (8,63%)</p>
+                    <p><strong>Textiles techniques:</strong> 250 entreprises</p>
+                    <p><strong>Habillement:</strong> 63% totalement exportateur</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📊 Profil Consommateurs</h3>
+                    <p><strong>Sensibilité environnementale:</strong> Croissante</p>
+                    <p><strong>Qualité/Prix:</strong> Critère principal</p>
+                    <p><strong>Durabilité:</strong> 73% prêts à payer plus</p>
+                    <p><strong>Circuits courts:</strong> Avantage tunisien</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Répartition des Exportations par Pays Client</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pays</th>
+                            <th>Part de Marché</th>
+                            <th>Valeur (MD)</th>
+                            <th>Produits Principaux</th>
+                            <th>Tendance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🇫🇷 France</td>
+                            <td>35%</td>
+                            <td>1,380</td>
+                            <td>Confection, Vêtements travail</td>
+                            <td>↗️ Stable</td>
+                        </tr>
+                        <tr>
+                            <td>🇮🇹 Italie</td>
+                            <td>25%</td>
+                            <td>985</td>
+                            <td>Habillement, Textiles techniques</td>
+                            <td>↗️ Croissance</td>
+                        </tr>
+                        <tr>
+                            <td>🇩🇪 Allemagne</td>
+                            <td>19%</td>
+                            <td>749</td>
+                            <td>Vêtements professionnels</td>
+                            <td>↗️ Forte demande</td>
+                        </tr>
+                        <tr>
+                            <td>🇧🇪 Belgique</td>
+                            <td>8%</td>
+                            <td>315</td>
+                            <td>Confection</td>
+                            <td>→ Stable</td>
+                        </tr>
+                        <tr>
+                            <td>🇺🇸 États-Unis</td>
+                            <td>5%</td>
+                            <td>197</td>
+                            <td>Textiles spécialisés</td>
+                            <td>↗️ Potentiel</td>
+                        </tr>
+                        <tr>
+                            <td>Autres</td>
+                            <td>8%</td>
+                            <td>316</td>
+                            <td>Divers</td>
+                            <td>→ Variable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Concurrence -->
+        <div id="competition" class="content-section">
+            <div class="chart-container">
+                <div class="chart-title">Position Concurrentielle - Fournisseurs UE</div>
+                <canvas id="competitionChart"></canvas>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🏆 Position Tunisienne</h3>
+                    <p><strong>9ème fournisseur</strong> UE textile-habillement</p>
+                    <p><strong>Leader</strong> vêtements de travail (17,44%)</p>
+                    <p><strong>4ème</strong> fournisseur jeans UE (8,63%)</p>
+                    <p><strong>3ème</strong> producteur habillement monde arabe</p>
+                </div>
+                
+                <div class="card">
+                    <h3>⚔️ Concurrents Directs</h3>
+                    <p><strong>Chine:</strong> Leader mondial, pression prix</p>
+                    <p><strong>Turquie:</strong> Concurrent régional majeur</p>
+                    <p><strong>Roumanie:</strong> Avantage UE</p>
+                    <p><strong>Bangladesh:</strong> Coûts très compétitifs</p>
+                </div>
+                
+                <div class="card">
+                    <h3>💪 Avantages Compétitifs</h3>
+                    <p><strong>Proximité géographique:</strong> Circuits courts</p>
+                    <p><strong>Réactivité:</strong> Délais réduits</p>
+                    <p><strong>Qualité:</strong> Savoir-faire reconnu</p>
+                    <p><strong>Partenariats:</strong> 66,1% capitaux européens</p>
+                </div>
+                
+                <div class="card">
+                    <h3>⚠️ Défis Concurrentiels</h3>
+                    <p><strong>Pression prix:</strong> Concurrence asiatique</p>
+                    <p><strong>Coûts salariaux:</strong> Moins compétitifs</p>
+                    <p><strong>Intégration:</strong> Dépendance matières</p>
+                    <p><strong>Innovation:</strong> Retard technologique</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Analyse Comparative des Concurrents</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pays</th>
+                            <th>Rang UE</th>
+                            <th>Part Marché</th>
+                            <th>Avantages</th>
+                            <th>Faiblesses</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🇨🇳 Chine</td>
+                            <td>1er</td>
+                            <td>35%</td>
+                            <td>Prix, Volume, Intégration</td>
+                            <td>Distance, Délais, Qualité</td>
+                        </tr>
+                        <tr>
+                            <td>🇹🇷 Turquie</td>
+                            <td>2ème</td>
+                            <td>18%</td>
+                            <td>Proximité, Capacité</td>
+                            <td>Instabilité politique</td>
+                        </tr>
+                        <tr>
+                            <td>🇷🇴 Roumanie</td>
+                            <td>3ème</td>
+                            <td>12%</td>
+                            <td>UE, Coûts, Proximité</td>
+                            <td>Capacité limitée</td>
+                        </tr>
+                        <tr>
+                            <td>🇧🇩 Bangladesh</td>
+                            <td>4ème</td>
+                            <td>10%</td>
+                            <td>Coûts très bas</td>
+                            <td>Distance, Qualité, Éthique</td>
+                        </tr>
+                        <tr>
+                            <td>🇹🇳 Tunisie</td>
+                            <td>9ème</td>
+                            <td>5.1%</td>
+                            <td>Proximité, Qualité, Réactivité</td>
+                            <td>Coûts, Intégration</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Emploi & Métiers -->
+        <div id="employment" class="content-section">
+            <div class="chart-container">
+                <div class="chart-title">Métiers en Tension - Besoins Immédiats</div>
+                <canvas id="jobsChart"></canvas>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>👥 Situation Emploi</h3>
+                    <p><strong>160,000</strong> emplois actuels</p>
+                    <p><strong>32,000</strong> postes à pourvoir</p>
+                    <p><strong>93,5%</strong> besoins en confection</p>
+                    <p><strong>5,4%</strong> couverts par formation</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🔧 Métiers Critiques</h3>
+                    <p><strong>Piqueurs:</strong> 23,128-24,667 postes</p>
+                    <p><strong>Contrôleurs:</strong> 1,367 postes</p>
+                    <p><strong>Techniciens:</strong> 1,219 postes</p>
+                    <p><strong>Ingénieurs:</strong> 327 postes (47 diplômés)</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🆕 Nouveaux Métiers</h3>
+                    <p><strong>19 métiers</strong> non couverts par formation</p>
+                    <p><strong>Machines spéciales:</strong> Ultrasons, laser</p>
+                    <p><strong>Sérigraphie:</strong> Impression textile</p>
+                    <p><strong>Design produit:</strong> Textiles techniques</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📚 Défis Formation</h3>
+                    <p><strong>Taux abandon:</strong> >30% centres formation</p>
+                    <p><strong>Image secteur:</strong> Peu attractive</p>
+                    <p><strong>Conditions:</strong> 48h/semaine</p>
+                    <p><strong>Concurrence:</strong> Secteur câblage (40h)</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Top 10 des Métiers en Tension</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Métier</th>
+                            <th>Besoins</th>
+                            <th>Formation Actuelle</th>
+                            <th>Écart</th>
+                            <th>Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Agent fabrication/Piqueur</td>
+                            <td>24,667</td>
+                            <td>4%</td>
+                            <td>23,667</td>
+                            <td>🔴 Critique</td>
+                        </tr>
+                        <tr>
+                            <td>Contrôleur qualité</td>
+                            <td>1,367</td>
+                            <td>0%</td>
+                            <td>1,367</td>
+                            <td>🔴 Critique</td>
+                        </tr>
+                        <tr>
+                            <td>Agent de coupe</td>
+                            <td>1,260</td>
+                            <td>0%</td>
+                            <td>1,260</td>
+                            <td>🔴 Critique</td>
+                        </tr>
+                        <tr>
+                            <td>Technicien fabrication</td>
+                            <td>1,219</td>
+                            <td>24%</td>
+                            <td>927</td>
+                            <td>🟠 Élevée</td>
+                        </tr>
+                        <tr>
+                            <td>Agent repassage</td>
+                            <td>1,033</td>
+                            <td>0%</td>
+                            <td>1,033</td>
+                            <td>🔴 Critique</td>
+                        </tr>
+                        <tr>
+                            <td>Technicien méthode</td>
+                            <td>750</td>
+                            <td>9%</td>
+                            <td>683</td>
+                            <td>🟠 Élevée</td>
+                        </tr>
+                        <tr>
+                            <td>Technicien contrôle qualité</td>
+                            <td>630</td>
+                            <td>10%</td>
+                            <td>567</td>
+                            <td>🟠 Élevée</td>
+                        </tr>
+                        <tr>
+                            <td>Mécanicien</td>
+                            <td>496</td>
+                            <td>5%</td>
+                            <td>471</td>
+                            <td>🟠 Élevée</td>
+                        </tr>
+                        <tr>
+                            <td>Ingénieur Textile</td>
+                            <td>327</td>
+                            <td>47</td>
+                            <td>280</td>
+                            <td>🔴 Critique</td>
+                        </tr>
+                        <tr>
+                            <td>Ouvrier machine spéciale</td>
+                            <td>308</td>
+                            <td>0%</td>
+                            <td>308</td>
+                            <td>🟡 Moyenne</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Recommandations -->
+        <div id="recommendations" class="content-section">
+            <div class="recommendations">
+                <h2>🎯 Recommandations Stratégiques</h2>
+                
+                <div class="recommendation-item">
+                    <h4>1. Renforcement de la Formation Professionnelle</h4>
+                    <p><strong>Action immédiate:</strong> Augmenter la capacité de formation de 5,4% à 25% du besoin d'ici 2026. Créer des programmes pour les 19 nouveaux métiers identifiés. Moderniser l'équipement des centres avec des machines programmables et smart. Recruter des formateurs avec expérience industrielle.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>2. Amélioration de l'Attractivité Secteur</h4>
+                    <p><strong>Mesures prioritaires:</strong> Réviser les grilles salariales pour être compétitif face au secteur câblage. Réduire le régime horaire de 48h à 44h/semaine. Lancer une campagne de communication pour améliorer l'image du secteur. Développer des programmes de reconnaissance et d'évolution de carrière.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>3. Intégration Verticale et Développement Local</h4>
+                    <p><strong>Objectif:</strong> Passer de 7% à 25% d'intégration locale d'ici 2030. Encourager l'implantation d'entreprises de tissage et filature. Développer des partenariats avec des groupes européens pour le transfert technologique. Créer des zones industrielles intégrées textile.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>4. Transition vers l'Économie Circulaire</h4>
+                    <p><strong>Opportunité:</strong> Capitaliser sur la demande croissante (73% consommateurs prêts à payer plus). Développer des filières de recyclage textile. Former aux métiers de l'éco-conception. Obtenir les certifications environnementales européennes. Anticiper l'étiquetage obligatoire 2026.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>5. Innovation et Textiles Techniques</h4>
+                    <p><strong>Diversification:</strong> Développer le segment textiles techniques (marché 180 milliards USD, +8% annuel). Créer un centre R&D textile. Former aux applications médicales, automobiles, géotextiles. Établir des partenariats université-industrie pour l'innovation.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>6. Digitalisation et Industrie 4.0</h4>
+                    <p><strong>Modernisation:</strong> Intégrer l'IoT et l'automatisation dans la production. Former aux métiers du numérique textile. Développer la maintenance prédictive. Créer des systèmes de gestion de production connectés. Former 500 techniciens Industrie 4.0 d'ici 2026.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>7. Optimisation Logistique et Compétitivité</h4>
+                    <p><strong>Avantage concurrentiel:</strong> Exploiter la proximité géographique avec l'Europe. Réduire les délais de livraison de 20%. Améliorer la traçabilité des produits. Développer des plateformes logistiques intégrées. Renforcer les circuits courts.</p>
+                </div>
+                
+                <div class="recommendation-item">
+                    <h4>8. Gouvernance et Coordination Sectorielle</h4>
+                    <p><strong>Pilotage:</strong> Créer un observatoire des métiers textile. Améliorer la coordination formation-emploi. Moderniser les services ANETI. Développer un système d'information intégré marché du travail. Renforcer le dialogue social sectoriel.</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">Feuille de Route 2025-2030</div>
+                <canvas id="roadmapChart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <h3>Plan d'Action Prioritaire</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Échéance</th>
+                            <th>Budget Estimé</th>
+                            <th>Impact Attendu</th>
+                            <th>Responsable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Formation 19 nouveaux métiers</td>
+                            <td>2025-2026</td>
+                            <td>15 MD</td>
+                            <td>+8,000 formés/an</td>
+                            <td>MFPE + FTTH</td>
+                        </tr>
+                        <tr>
+                            <td>Révision grilles salariales</td>
+                            <td>2025</td>
+                            <td>-</td>
+                            <td>+20% attractivité</td>
+                            <td>Patronat + Syndicats</td>
+                        </tr>
+                        <tr>
+                            <td>Centre R&D textile</td>
+                            <td>2025-2027</td>
+                            <td>25 MD</td>
+                            <td>50 projets innovation</td>
+                            <td>MHESR + FTTH</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Zone industrielle intégrée</td>
+                            <td>2026-2028</td>
+                            <td>100 MD</td>
+                            <td>+15% intégration</td>
+                            <td>MI + Investisseurs</td>
+                        </tr>
+                        <tr>
+                            <td>Certification environnementale</td>
+                            <td>2025-2026</td>
+                            <td>8 MD</td>
+                            <td>+30% prix premium</td>
+                            <td>FTTH + Entreprises</td>
+                        </tr>
+                        <tr>
+                            <td>Plateforme logistique</td>
+                            <td>2026-2027</td>
+                            <td>50 MD</td>
+                            <td>-20% délais</td>
+                            <td>MT + Privé</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
